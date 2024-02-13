@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Images</title>
+  </head>
+  <body>
+    <img src="./images/1M2A8993.JPG" width="500px" />
+    <script>
+      const myImage = document.querySelector("img");
+
+      myImage.onclick = () => {
+        const mySrc = myImage.getAttribute("src");
+        if (mySrc === "./images/1M2A8993.JPG") {
+          myImage.setAttribute("src", "./images/2322646.jpg");
+        } else {
+          myImage.setAttribute("src", "./images/1M2A8993.JPG");
+        }
+      };
+    </script>
+  </body>
+</html>

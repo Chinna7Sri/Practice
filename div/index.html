@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Div</title>
+    <style>
+      .top-div {
+        text-align: center;
+        width: 65%;
+        height: 50%;
+        background: rgb(171, 245, 247);
+      }
+      .child-divs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+      }
+      .left-div {
+        width: 30%;
+        height: 40%;
+        margin: 10px;
+        /* background: linear-gradient(to bottom, #00ffff, #800080); */
+        background-color: blue;
+        box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.5);
+        /* transition: background-color 0.5s; */
+      }
+      .left-div:hover {
+        width: 33%;
+        height: 44%;
+        cursor: pointer;
+        background-color: lightblue;
+        transition: background-color 1s, width 1s, height 1s;
+      }
+      .right-div {
+        width: 20%;
+        height: 40%;
+        margin: 10px;
+        background: linear-gradient(to top, #00ffff, #800080);
+        box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.5);
+        padding: 5px;
+      }
+      .image-div {
+        margin: 10px;
+      }
+      .details-div {
+        margin: 10px;
+      }
+      .list-items {
+        list-style: none;
+        float: left;
+      }
+      #follow {
+        background-color: black;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+      }
+      #follow:hover {
+        background-color: white;
+        color: black;
+        border: none;
+      }
+      #view_profile {
+        background-color: white;
+        color: black;
+        padding: 8px 15px;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+      }
+      #view_profile:hover {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-div">
+      <h1 style="background-color: antiquewhite">My Profile Card</h1>
+      <div class="child-divs">
+        <div class="left-div">
+          <h2>Student Profile Picutre</h2>
+          <div class="image-div">
+            <img src="./2322646.jpg" width="50%" />
+          </div>
+          <div class="details-div">
+            <p>Chouda Reddy</p>
+            <p>Software Engineer</p>
+            <p>28</p>
+          </div>
+        </div>
+        <div class="right-div">
+          <div class="languages">
+            <ol class="list-items">
+              <h4>Languages known</h4>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Java Script</li>
+              <li>React JS</li>
+            </ol>
+          </div>
+          <div class="buttons">
+            <button id="follow">Follow</button>
+            <button id="view_profile">View Profile</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

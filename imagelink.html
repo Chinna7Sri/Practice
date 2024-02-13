@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Link</title>
+  </head>
+  <body>
+    <input
+      type="image"
+      src="./images/1M2A8993.JPG"
+      width="30px"
+      height="30px"
+    />
+    <a href="./images/1M2A8993.JPG">Link</a>
+    <script>
+      function imageLink(color) {
+        linkText = document.querySelector("a");
+        linkText.style.color = color;
+      }
+      imageLink("red");
+    </script>
+  </body>
+</html>
