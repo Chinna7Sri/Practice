@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arithematic Operations</title>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <p>
+      <label>First Number</label>
+      <input />
+    </p>
+    <p>
+      <label>Second Number</label>
+      <input />
+    </p>
+    <p>
+      <p>
+        <select id="operation">
+          <option value="add">Addition</option>
+          <option value="sub">Subtraction</option>
+          <option value="mul">Multiplication</option>
+          </select>
+      </p>
+      <button type="submit" onClick="performOperation()">Submit</button>
+    </p>
+    <p>Result is <span></span></p>
+  </body>
+  <script>
+    function performOperation() {
+      // debugger;
+      var FirstElement = document.querySelector(
+        "body > p:nth-child(2) > input"
+      );
+      var SecondElement = document.querySelector(
+        "body > p:nth-child(3) > input"
+      );
+      var operation = document.querySelector("#operation").value;
+      var resultRef = document.querySelector("body > p:nth-child(8) > span");
+      var no1 = FirstElement.value;
+      var no2 = SecondElement.value;
+      var ResultOfTwoNumbers;
+      switch(operation){
+        case "add" :
+          ResultOfTwoNumbers= parseInt(no1) + parseInt(no2);
+          break;
+        case "sub" :
+          ResultOfTwoNumbers= parseInt(no1) - parseInt(no2);
+          break;
+        case "mul" :
+          ResultOfTwoNumbers= parseInt(no1) * parseInt(no2);
+          break;
+        default:
+          ResultOfTwoNumbers = "Invalid operations";
+      }
+      FirstElement.value = "";
+      SecondElement.value = "";
+      resultRef.innerText = ResultOfTwoNumbers;
+      var color = "Red";
+      if (ResultOfTwoNumbers > 100) {
+        color = "green";
+      }
+      resultRef.style.color = color;
+    }
+  </script>
+</html>

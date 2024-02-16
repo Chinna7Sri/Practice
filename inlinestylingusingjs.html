@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline</title>
+  </head>
+  <body>
+    <div>This is my Div Tag</div>
+    <script>
+      var divRef = document.getElementsByTagName("div")[0];
+      divRef.style.color = "red";
+      divRef.classList.add("c1");
+      divRef.classList.add("c2");
+      divRef.classList.remove("c1");
+      // divRef.className("sri"); --error
+      divRef.className = "Sri";
+      divRef.setAttribute("class", "Chinna");
+    </script>
+  </body>
+</html>

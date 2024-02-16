@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Div</title>
+    <style>
+      * {
+        background-color: white;
+      }
+      .div {
+        width: 200px;
+        height: 300px;
+        text-align: center;
+        background-color: palegreen;
+        border: 1px solid transparent;
+        /* color: whit; */
+        transition: background-color 2s;
+      }
+      .div:hover {
+        background-color: lightblue;
+        border: 1px solid red;
+        transition: border-color 2s;
+      }
+      .div:hover .para {
+        background-color: lightblue;
+      }
+      .para {
+        background-color: palegreen;
+        transition: background-color 2s;
+      }
+      @keyframes borderAnimation {
+        0% { border-color: red; }
+        25% { border-color: blue; }
+        50% { border-color: green; }
+        75% { border-color: yellow; }
+        100% { border-color: red; }
+    }
+    
+    /* Apply the animation to the element with the 'animated-border' class */
+    .para {
+        border: 2px solid;
+        animation: borderAnimation 5s infinite; /* Apply the animation for 5 seconds and repeat infinitely */
+    }
+    
+    /* Additional styling for demonstration purposes */
+    .div {
+        padding: 20px;
+        text-align: center;
+    }
+</style>
+    </style>
+  </head>
+  <body>
+    <div class="div">
+      <p class="para">Paragraph</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Border Animation</title>
+    <style>
+      /* Define the keyframes for the border animation */
+      @keyframes borderAnimation {
+        0% {
+          border-color: var(--color1);
+        }
+        50% {
+          border-color: var(--color2);
+        }
+        100% {
+          border-color: var(--color1);
+        }
+      }
+
+      /* Apply the animation to the element with the 'animated-border' class */
+      .animated-border {
+        border: 2px solid;
+        animation: borderAnimation 2s infinite; /* Apply the animation for 2 seconds and repeat infinitely */
+        transition: border-color 0.3s ease-in-out; /* Add a transition for smoother color changes */
+      }
+
+      /* Additional styling for demonstration purposes */
+      .container {
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Apply the 'animated-border' class to the element where you want to apply the animated border -->
+      <div class="animated-border" style="--color1: red; --color2: blue">
+        Advanced Border Animation
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Multi-Color Border</title>
+    <style>
+      /* Define the keyframes for the border animation */
+      @keyframes borderAnimation {
+        0% {
+          border-image: linear-gradient(to right, red, orange);
+        }
+        20% {
+          border-image: linear-gradient(to right, orange, yellow);
+        }
+        40% {
+          border-image: linear-gradient(to right, yellow, green);
+        }
+        60% {
+          border-image: linear-gradient(to right, green, blue);
+        }
+        80% {
+          border-image: linear-gradient(to right, blue, indigo);
+        }
+        100% {
+          border-image: linear-gradient(to right, indigo, violet);
+        }
+      }
+
+      /* Apply the animation to the element with the 'animated-border' class */
+      .animated-border {
+        border-width: 5px;
+        border-style: solid;
+        border-image-slice: 1;
+        animation: borderAnimation 5s infinite linear; /* Apply the animation for 5 seconds and repeat infinitely */
+      }
+
+      /* Additional styling for demonstration purposes */
+      .container {
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Apply the 'animated-border' class to the element where you want to apply the animated border -->
+      <div class="animated-border" style="width: 200px; height: 200px"></div>
+    </div>
+  </body>
+</html>
